@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Utilizando CSS para estilizar</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <h1>Exemplo utilizando CSS para estilizar no lugar da utilização de tags/atributos deprecated (depreciado).</h1>
+
+    <h2 class="texto-centralizado texto-normal">Meu texto <span class="texto-realce">centralizado</span></h2>
+
+    <div class="marquee-container">
+
+        <span class="marquee">Essa é uma mensagem extremamente importante! Estamos estilizando com CSS para simular a tag.<code>&lt;marquee&gt;</code></span>
+
+    </div>
+    <div>
+        <p>
+            <span class="texto-negrito">Texto em negrito:</span>
+            foi definido como negrito utilizando <code>font-weight: bold</code> no CSS
+        </p>
+    </div>
+    <div>
+        <p>
+            <span class="texto-sublinhado">Texto sublinhado:</span>
+            Foi definido como sublinhado utilizando <code>text-decoration: underline</code> no CSS
+        </p>
+    </div>
+    <table>
+        <thead>
+            <tr>
+                <th class="colina-codigo">Codigo</th>
+                <th class="coluna-nome">Nome</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>
+                    <a href="https://google.com">1</a>
+                </td>
+                <td>Maçã</td>
+            </tr>
+            <tr>
+                <td>
+                    <a href="https://google.com">2</a>
+                </td>
+                <td>
+                    <a href="https://google.com?query=pizza+de+calabresa">Pizza de Calabresa</a>
+                </td>
+            </tr>
+            <tr>
+                <td>3</td>
+                <td>X-tudo</td>
+            </tr>
+            <tr>
+                <td>4</td>
+                <td>Feijão com arroz</td>
+            </tr>
+        </tbody>
+    </table>
+    <img src="html.png" alt="foto contendo a logo HTML5">
+</body>
+</html>
