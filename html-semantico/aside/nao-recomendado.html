@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="nao-recomendado.css">
+    <script src="index.js" defer></script>
+</head>
+<body>
+    <!--div.sidebar-esquerda>ul>li(button+ul:li*4)-->
+    <div class="sidebar-esquerda">
+        <ul>
+            <li>
+                <button class="toggle-button" data-submenu="submenu-calcados">Calçados</button>
+                <ul class="hidden-items" id="submenu-calcados">
+                    <li>Tênis</li>
+                    <li>Chinelo</li>
+                    <li>Sandália</li>
+                    <li>Crocs</li>
+                </ul>
+            </li>
+            <li>
+                <button class="toggle-button" data-submenu="submenu-camisetas">Camisetas</button>
+                <ul class="hidden-items" id="submenu-camisetas">
+                    <li>Nike</li>
+                    <li>Adidas</li>
+                    <li>Lacoste</li>
+                </ul>
+            </li>
+            <li>
+                <button class="toggle-button" data-submenu="submenu-casacos">Casacos</button>
+                <ul class="hidden-items" id="submenu-casacos">
+                    <li>Fila</li>
+                    <li>SMD</li>
+                    <li>Polo</li>
+                </ul>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h1>Conteúdo da Página</h1>
+    </div>
+
+    <div class="sidebar-direita">
+        <ul>
+            <li>Perfil
+                <ul>
+                    <li>Alterar Senha</li>
+                    <li>Sair</li>
+                </ul>
+            </li>
+            <li>Pedidos
+                <ul>
+                    <li>Cancelados</li>
+                    <li>Em andamento</li>
+                    <li>Finalizados</li>
+                </ul>
+            </li>
+            
+        </ul>
+    </div>
+
+</body>
+</html>

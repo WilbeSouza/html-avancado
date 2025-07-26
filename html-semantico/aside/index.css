@@ -1,0 +1,80 @@
+aside.sidebar-esquerda,
+aside.sidebar-direita{
+    width: 250px;
+    height: 100vh;
+    background-color: #333;
+    color: #fff;
+    padding: 0 15px;
+}
+body{
+    padding: 0;
+    margin: 0;
+    display: flex; /*ativar o flexbox*/
+    flex-direction: row;
+}
+aside.sidebar-esquerda ul,
+aside.sidebar-direita ul{
+    list-style-type: none;
+    padding: 0;
+}
+aside.sidebar-esquerda ul>li,
+aside.sidebar-direita ul>li{
+    padding: 10px;
+    cursor: pointer;
+}
+aside.sidebar-esquerda ul>li:hover,
+aside.sidebar-direita ul>li:hover{
+    background-color: #575757;
+}
+.toggle-button{
+    background-color: #444;
+    border: none;
+    color: #fff;
+    padding: 10px;
+    text-align: left;
+    cursor: pointer;
+    width: 100%;
+}
+.toggle-button:hover{
+    background-color: #575757;
+}
+.hidden-items{
+    display: none;
+}
+.container{
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    animation: gradient 15s ease infinite;
+    background-size: 400% 400%;
+    width: 100%;
+}
+.container h1{
+    text-align: center;
+}
+@keyframes gradient{
+    0%{
+        background-position: 0% 50%;
+    }
+    50%{
+        background-position: 100% 50%;
+    }
+
+    100%{
+        background-position: 0% 50%;
+    }
+}
+.sidebar-direita ul ul{
+    padding-left: 16px;
+    max-height: 0px;
+    overflow: hidden;
+    opacity: 0;
+    transform: translateY(-10px);
+    transition: max-height 0.8s ease, opacity 0.8s ease, transform 0.8s ease;    
+}
+.sidebar-direita ul li:hover > ul{
+    max-height: 500px;
+    opacity: 1;
+    transform: translateY(0px);
+}
+.sidebar-direita ul ul li:hover{
+    background-color: #666;
+}
