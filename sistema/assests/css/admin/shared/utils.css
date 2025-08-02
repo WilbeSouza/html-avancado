@@ -1,0 +1,19 @@
+.btn{
+    background-color: var(--btn-bg);
+    color: var(--text-light);
+    border: none;
+    padding: 0.5rem 1rem;
+    font-size: 1rem;
+    text-decoration: none;
+
+    &:hover, &focus{
+        cursor: pointer;
+        background-color: var(--btn-hover);
+    }
+}
+.btn-apagar i{
+    color: #ff0000;
+}
+.btn-pincel{
+    color: yellow;
+}

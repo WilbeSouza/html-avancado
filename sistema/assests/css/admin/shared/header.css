@@ -1,0 +1,36 @@
+
+header{
+    background-color: var(--header-bg);
+    color: var(--text-light);
+    padding: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h1{
+        margin: 0;
+        font-size: 1.5rem;
+    }
+}
+
+nav ul{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    gap: 1rem;
+}
+nav a{
+    color: var(--text-light);
+    text-decoration: none;
+    font-weight: bold;
+
+    &:focus,
+    &:hover{
+   text-decoration: underline;
+    }
+}
+/*nav a:focus,
+nav a:hover{
+   text-decoration: underline;
+}*/
