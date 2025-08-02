@@ -3,3 +3,51 @@
 @import url("../../shared/header.css");
 @import url("../../shared/page.css");
 @import url("../../shared/utils.css");
+
+.servicos-header{
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    h2{
+        margin: 0;
+        font-size: 1.5rem;
+        color: var(--header-bg);
+    }
+}
+.section{
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    overflow: hidden;
+}
+ul.services-list{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+li.service-item{
+    display: flex;
+    align-items: flex-start;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+}
+li.service-item:last-child{
+    border-bottom: none;
+}
+.service-icon{
+    font-size: 2rem;
+    margin-right: 1rem;
+    line-height: 1;
+}
+.service-details h3{
+    margin: 0 0 0.25rem;
+    font-size: 1.1rem;
+    color: var(--header-bg);
+}
+.service-details p{
+    margin: 0;
+    font-size: 0.9rem;
+    color: var(--text-color);
+}
