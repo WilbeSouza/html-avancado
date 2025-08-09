@@ -3,3 +3,50 @@
 @import url("../../shared/header.css");
 @import url("../../shared/page.css");
 @import url("../../shared/utils.css");
+
+.quartos-header{
+    display: flex;
+    align-items: center;
+    justify-content:  space-between;
+    margin-bottom: 1rem;
+
+    h2{
+        margin: 0;
+        font-size: 1.5rem;
+        color: var(--header-bg);
+    }
+}
+
+.grid-wrapper{
+    overflow: auto;
+}
+.grid-quartos{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+}
+.quarto-card{
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-bg);
+    border-radius: 4px;
+    padding: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+.quarto-info{
+    margin-bottom: 1rem;
+    h3{
+        margin: 0 0 0.5rem;
+        font-size: 1.25rem;
+        color: var(--header-bg);
+    }
+    p{
+        margin: 0.25rem 0;
+        font-size: 0.9rem;
+    }
+}
+.card-actions{
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}

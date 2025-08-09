@@ -1,0 +1,38 @@
+@import url("../../shared/cores.css");
+@import url("../../shared/footer.css");
+@import url("../../shared/header.css");
+@import url("../../shared/page.css");
+@import url("../../shared/utils.css");
+
+
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+    text-align: center;
+}
+
+.message{
+    margin-bottom: 2rem;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+}
+.btn-confirm{
+    background-color: #d32f2f;
+    color: #fff;
+}
+.btn-confirm:hover{
+    background-color: #b71c1c;
+}
+
+.btn-cancel{
+    background-color: #757575;
+    color: #fff;
+}
+.btn-cancel:hover{
+    background-color: #424242;
+}
