@@ -1,0 +1,75 @@
+@import url("../../admin/shared/cores.css");
+*{
+    box-sizing: border-box;
+}
+
+body{
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: var(--bg-main);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: var(--text-color);
+}
+
+main{
+    background-color: var(--card-bg);
+    padding: 2rem;
+    max-width: 420px;
+    width: 100%;
+    border-radius: 8px;
+    text-align: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    h1{
+        margin:  0 0 1.5rem;
+        font-size: 1.75rem;
+        color: var(--header-bg);
+    }
+}
+#alterarSenhaForm .form-group{
+    margin-bottom: 1rem;
+    text-align: left;
+}
+#alterarSenhaForm label{
+    display: block;
+    margin-bottom: 0.25rem;
+    font-size: 0.95rem;
+}
+#alterarSenhaForm input[type="password"]{
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid var(--border-color);
+    border-radius: 4px;
+    font-size: 1rem;
+}
+.buttons{
+    display: flex;
+    gap: 1rem;
+    justify-content: center;
+    margin-top: 1rem;
+}
+.btn {
+    width: 100%;
+    background-color: var(--btn-bg);
+    color: var(--text-light);
+    border: none;
+    border-radius: 4px;
+    font-size: 1rem;
+    margin-top: 0.5rem;
+    padding: 0.75rem;
+    &hover{
+        background-color: var(--btn-hover);
+        cursor: pointer;
+    }
+}
+.btn-cancel{
+    background-color: #757575;
+    color: var(--text-light);
+    text-decoration: none;
+
+    &:hover{
+        background-color: #424242;
+    }
+}
