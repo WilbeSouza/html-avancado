@@ -1,40 +1,114 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homer</title>
-    <link rel="stylesheet" href="assests/css/admin/pages/homer.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>HotelPro - Home</title>
+  <link rel="stylesheet" href="assests/css/public/pages/index.css">
 </head>
 <body>
-  
-    
-</body>
-    <header>
-        <h1>Sistema de Hotelaria</h1>
-        <nav>
-            <ul>
-                <li>
-                    <li><a href="../dashboard">Início</a></li>
-                    <li><a href="../hospedes">Hóspedes</a></li>
-                    <li><a href="../reservas">Reservas</a></li>
-                    <li><a href="../quartos">Quartos</a></li>
-                    <li><a href="../servicos">Serviços</a></li>
-                    <li><a href="../relatorios">Relatórios</a></li>
-                    <li><a href="../configuracoes">Configurações</a></li>
-                    <li><a href="../logout">Sair</a></li>
-                </li>
-            </ul>
-        </nav>
-    </header>
+  <header>
+    <div class="logo">
+      <!-- Aqui você pode colocar sua logo -->
+       <img src="https://images.squarespace-cdn.com/content/v1/659e14cfc14476112aceb1c3/d7e696a1-081f-4eb2-a7c8-cebc7ddb00b8/HotelPro-LOGO%26TAG.png" width="300" alt="300">
+      
+    </div>
+    <nav>
+      <ul>
+        <li><a href="../sistema/admin/dashboard/">Início</a></li>
+        <li><a href="../hospedes">Hóspedes</a></li>
+        <li><a href="../reservas">Reservas</a></li>
+        <li><a href="../quartos">Quartos</a></li>
+        <li><a href="../servicos">Serviços</a></li>
+        <li><a href="../relatorios">Relatórios</a></li>
+        <li><a href="../configuracoes">Configurações</a></li>
+        <li><a href="../logout">Sair</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <main>
-        
-    </main>
+  <main>
+    <!-- Objetivo do sistema -->
+    <section class="intro">
+      <h2>Nosso Objetivo</h2>
+      <p>
+        O <strong>HotelPro</strong> é um sistema completo para gestão de hotéis, 
+        oferecendo praticidade, organização e eficiência no controle de hóspedes, 
+        reservas, quartos e serviços.
+      </p>
+    </section>
 
-    <footer>
-        &copy; 2025 HoteSys. Todos os direitos reservados.
-    </footer>
+    <!-- Como funciona -->
+    <section class="funcionamento">
+      <h2>Como Funciona</h2>
+      <div class="grid-func">
+        <div class="item">
+          <h3>🏨 Hotel</h3>
+          <p>Administre todas as informações do seu hotel de forma centralizada.</p>
+        </div>
+        <div class="item">
+          <h3>👥 Hóspedes</h3>
+          <p>Cadastre e acompanhe o histórico de cada hóspede.</p>
+        </div>
+        <div class="item">
+          <h3>📅 Reservas</h3>
+          <p>Controle as reservas de forma prática, evitando conflitos.</p>
+        </div>
+        <div class="item">
+          <h3>🛏️ Quartos</h3>
+          <p>Gerencie a disponibilidade e tipos de quartos do hotel.</p>
+        </div>
+        <div class="item">
+          <h3>🛎️ Serviços</h3>
+          <p>Adicione serviços extras como lavanderia, restaurante e spa.</p>
+        </div>
+        <div class="item">
+          <h3>📊 Relatórios</h3>
+          <p>Obtenha relatórios detalhados sobre faturamento e ocupação.</p>
+        </div>
+      </div>
+    </section>
 
+    <!-- Inspiração -->
+    <section class="inspiracao">
+      <h2>Inspiração para Criar o Sistema</h2>
+      <p>
+        O HotelPro nasceu da necessidade de modernizar a gestão hoteleira, 
+        trazendo tecnologia, agilidade e controle em um só lugar.
+      </p>
+    </section>
+
+    <!-- Área de fotos -->
+    <section class="galeria">
+      <h2>Galeria</h2>
+      <div class="fotos">
+        <img src="https://picsum.photos/300/200?random=1" alt="Hotel 1">
+        <img src="https://picsum.photos/300/200?random=2" alt="Hotel 2">
+        <img src="https://picsum.photos/300/200?random=3" alt="Hotel 3">
+        <img src="https://picsum.photos/300/200?random=4" alt="Hotel 4">
+      </div>
+    </section>
+
+    <!-- Comentários -->
+    <section class="comentarios">
+      <h2>O que dizem nossos clientes</h2>
+      <div class="comentario">
+        <p>"O sistema facilitou toda a gestão do meu hotel. Recomendo!"</p>
+        <span>- Ana Silva, Gerente de Hotel</span>
+      </div>
+      <div class="comentario">
+        <p>"Simples e prático. Agora consigo controlar reservas em segundos."</p>
+        <span>- João Pereira, Recepcionista</span>
+      </div>
+      <div class="comentario">
+        <p>"Os relatórios me ajudaram a aumentar a lucratividade do hotel."</p>
+        <span>- Maria Souza, Diretora</span>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    &copy; 2025 HoteSys. Todos os direitos reservados.
+  </footer>
 </body>
 </html>

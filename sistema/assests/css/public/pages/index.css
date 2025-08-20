@@ -1,0 +1,147 @@
+@import url("../../assests/css/shared/cores.css");
+
+body {
+  margin: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  background-color: var(--bg-main);
+  color: var(--text-color);
+}
+
+/* Header */
+header {
+  background-color: var(--header-bg);
+  color: var(--text-light);
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+header .logo h1 {
+  margin: 0;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  gap: 1rem;
+}
+
+nav a {
+  color: var(--text-light);
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+nav a:hover {
+  text-decoration: underline;
+}
+
+/* Seções principais */
+main {
+  flex: 1;
+  padding: 2rem;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 1rem;
+  color: var(--header-bg);
+}
+
+/* Objetivo */
+.intro {
+  text-align: center;
+  margin-bottom: 2rem;
+}
+
+/* Funcionamento */
+.grid-func {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1rem;
+}
+
+.grid-func .item {
+  background: var(--card-bg);
+  border: 1px solid var(--border-color);
+  border-radius: 10px;
+  padding: 1.2rem;
+  text-align: center;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.grid-func .item:hover {
+  transform: translateY(-5px);
+}
+
+/* Inspiração */
+.inspiracao {
+  text-align: center;
+  margin: 3rem 0;
+  font-style: italic;
+}
+
+/* Galeria */
+.galeria {
+  margin-bottom: 3rem;
+}
+
+.galeria .fotos {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+}
+
+.galeria img {
+  width: 100%;
+  border-radius: 10px;
+  transition: transform 0.3s;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.2);
+}
+
+.galeria img:hover {
+  transform: scale(1.05);
+}
+
+/* Comentários */
+.comentarios {
+  margin-bottom: 3rem;
+}
+
+.comentario {
+  background: var(--card-bg);
+  padding: 1.2rem;
+  margin: 1rem auto;
+  border-left: 5px solid var(--btn-bg);
+  border-radius: 6px;
+  max-width: 600px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.comentario p {
+  margin: 0;
+  font-style: italic;
+}
+
+.comentario span {
+  display: block;
+  margin-top: 0.5rem;
+  font-size: 0.9rem;
+  text-align: right;
+  color: #555;
+}
+
+/* Rodapé */
+footer {
+  background-color: var(--btn-bg);
+  color: var(--text-light);
+  text-align: center;
+  padding: 1rem;
+}
