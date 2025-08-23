@@ -3,3 +3,43 @@
 @import url("../../shared/header.css");
 @import url("../../shared/page.css");
 @import url("../../shared/utils.css");
+
+.reports-header{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
+
+    h2{
+        margin: 0;
+        font-size: 1.5rem;
+        color: var(--header-bg);
+    }
+}
+.report-metadata{
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+
+    p{
+        margin: 0.25rem 0;
+        font-size: 0.95rem;
+        color: var(--text-color);
+    }
+}
+.chart-container{
+    background-color: var(--card-bg);
+    padding: 1rem;
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+    
+    canvas{
+        width: 100%;
+        max-height: 400px;
+        background-color: purple;
+    }
+}
