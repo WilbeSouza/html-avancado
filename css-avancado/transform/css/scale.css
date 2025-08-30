@@ -1,0 +1,27 @@
+.scale-1{
+    background-color: #2ecc71;
+    transform: scale(1);
+    margin-right: 10px;
+}
+.scale-1-5{
+    background-color: #3498db;
+    transform: scale(1.5);
+}
+.scale-0-5{
+    background-color: #e74c3c;
+    transform: scale(0.5);
+}
+.scale-hover{
+    background-color: #9b59b6;
+    &:hover{
+        transform: scale(1.2);
+    }
+}
+.scale-active{
+    user-select: none;
+    background-color: #f39c12;
+    &:active{
+        transform:scale(0.8);
+    }
+}
+/*translate*/

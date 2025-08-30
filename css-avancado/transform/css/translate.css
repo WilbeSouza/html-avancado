@@ -1,0 +1,28 @@
+.box{
+    text-align: center;
+    transition: transform 1s ease;
+}
+.translate-x{
+    background-color: #3498db;
+    &:hover{
+        transform: translateX(50px);
+    }
+}
+.translate-y{
+    background-color: #e74c3c;
+    &:hover{
+        transform: translateY(50px);
+    }
+}
+.translate-x-y{
+    background-color: #2ecc71;
+    &:hover{
+        transform: translate(50px, 50px);
+    }
+}
+.translate-active{
+    background-color: #f39c12;
+    &:active{
+        transform: translate(-30px, -90px);
+    }
+}

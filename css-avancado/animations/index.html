@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>CSS Animation — 10 exemplos didáticos</title>
+    <link rel="stylesheet" href="css/animations.css">
+</head>
+
+<body>
+    <header>
+        <h1>CSS Animation — 10 exemplos didáticos</h1>
+        <p>Propriedades: <code>animation-name</code>, <code>duration</code>, <code>timing-function</code>,
+            <code>delay</code>, <code>iteration-count</code>, <code>direction</code>, <code>fill-mode</code>,
+            <code>play-state</code>.
+        </p>
+        <p class="note">Passe o mouse sobre alguns exemplos para pausar. A página respeita
+            <code>prefers-reduced-motion</code>.
+        </p>
+    </header>
+
+    <main class="grid">
+        <!-- 1) Fade -->
+        <section class="card">
+            <h3><span class="pill c1">1</span>Fade in/out</h3>
+            <p>Opacidade variando continuamente com <code>ease-in-out</code>.</p>
+            <div class="stage">
+                <div class="fade-box" aria-label="Caixa com efeito de fade"></div>
+            </div>
+            <div class="note">@keyframes <b>fade</b> + <code>animation: fade 2.2s ease-in-out infinite;</code></div>
+        </section>
+
+        <!-- 2) Move X -->
+        <section class="card">
+            <h3><span class="pill c1">2</span>Movimento horizontal (alternate)</h3>
+            <p>A bolinha se move de um lado ao outro com <code>alternate</code>.</p>
+            <div class="stage">
+                <div class="track">
+                    <div class="dot"></div>
+                </div>
+            </div>
+            <div class="note"><code>animation-direction: alternate</code> evita “teletransporte”.</div>
+        </section>
+
+        <!-- 3) Bounce -->
+        <section class="card">
+            <h3><span class="pill c1">3</span>Quicar (bounce)</h3>
+            <p>Deforma levemente ao tocar o chão (squash &amp; stretch).</p>
+            <div class="stage">
+                <div class="ball"></div>
+                <div class="floor" aria-hidden="true"></div>
+            </div>
+            <div class="note">Cúbica personalizada no <code>timing-function</code>.</div>
+        </section>
+
+        <!-- 4) Spin -->
+        <section class="card">
+            <h3><span class="pill c2">4</span>Spinner</h3>
+            <p>Rotação contínua com <code>linear</code>.</p>
+            <div class="stage">
+                <div class="spinner" role="img" aria-label="Indicador de carregamento"></div>
+            </div>
+            <div class="note"><code>animation: spin 1s linear infinite;</code></div>
+        </section>
+
+        <!-- 5) Pulse + pause -->
+        <section class="card">
+            <h3><span class="pill c2">5</span>Pulso (pausa no hover)</h3>
+            <p>Interação: <code>animation-play-state: paused</code> no <em>hover</em>.</p>
+            <div class="stage">
+                <div class="pulse" title="Passe o mouse para pausar"></div>
+            </div>
+            <div class="note">Demonstra controle da animação via pseudo-interação.</div>
+        </section>
+
+        <!-- 6) Typewriter -->
+        <section class="card">
+            <h3><span class="pill c3">6</span>Máquina de escrever (steps)</h3>
+            <p>Uso de <code>steps(n)</code> para revelar caractere a caractere.</p>
+            <div class="stage">
+                <div class="typewriter">CSS animação é divertido!</div>
+            </div>
+            <div class="note"><code>animation: typing 3.2s steps(22) infinite alternate;</code></div>
+        </section>
+
+        <!-- 7) Loading bar -->
+        <section class="card">
+            <h3><span class="pill c3">7</span>Barra de carregamento</h3>
+            <p>De 0% até 100% com <code>linear</code>.</p>
+            <div class="stage">
+                <div class="bar"><span></span></div>
+            </div>
+            <div class="note">Ideal para simular progresso.</div>
+        </section>
+
+        <!-- 8) Skeleton shimmer -->
+        <section class="card">
+            <h3><span class="pill c3">8</span>Skeleton shimmer</h3>
+            <p>Simula conteúdo carregando com <code>background-position</code>.</p>
+            <div class="stage">
+                <div class="skeleton"></div>
+            </div>
+            <div class="note">Muito usado em <em>placeholders</em> de listas/cards.</div>
+        </section>
+
+        <!-- 9) Steps(n) -->
+        <section class="card">
+            <h3><span class="pill c4">9</span>Steps(n) em 5 posições</h3>
+            <p>Marcador “salta” por posições discretas (sem suavizar).</p>
+            <div class="stage">
+                <div class="steps-track">
+                    <div class="steps-dot"></div>
+                </div>
+            </div>
+            <div class="note"><code>animation: jump 2.5s steps(4) infinite;</code> (5 paradas).</div>
+        </section>
+
+        <!-- 10) Stagger + fill-mode -->
+        <section class="card">
+            <h3><span class="pill c4">10</span>Stagger com <code>fill-mode: both</code></h3>
+            <p>Itens aparecem em sequência usando <code>animation-delay</code>.</p>
+            <div class="stage">
+                <div class="lista">
+                    <span class="chip" style="--i:0">HTML</span>
+                    <span class="chip" style="--i:1">CSS</span>
+                    <span class="chip" style="--i:2">JS</span>
+                    <span class="chip" style="--i:3">React</span>
+                    <span class="chip" style="--i:4">Node</span>
+                </div>
+            </div>
+            <div class="note"><code>both</code> mantém o estado final após a animação.</div>
+        </section>
+
+        <!-- Extra: combinação -->
+        <section class="card">
+            <h3><span class="pill c1">Extra</span>Várias animações juntas</h3>
+            <p>Rodando e pulsando ao mesmo tempo (lista de animações).</p>
+            <div class="stage">
+                <div class="combo" aria-label="Quadrado girando e pulsando"></div>
+            </div>
+            <div class="note"><code>animation: spin ..., pulse ...;</code></div>
+        </section>
+    </main>
+
+    <footer style="text-align:center; color:var(--muted); font-size:12px; padding:0 20px 40px;">
+        Exemplos feitos para uso didático. Sinta-se à vontade para adaptar tempos, <em>timing-functions</em> e direções.
+    </footer>
+</body>
+
+</html>

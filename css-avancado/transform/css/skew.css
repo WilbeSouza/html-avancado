@@ -1,0 +1,21 @@
+.box{
+    transition: transform 0.3s ease;
+}
+.skew-x{
+    background-color: #3498db;
+    &:hover{
+        transform: skewX(20deg);
+    }
+}
+.skew-y{
+    background-color: #e73c3c;
+    &:hover{
+        transform: skewY(20deg);
+    }
+}
+.skew-x-y{
+    background-color: #2ecc71;
+    &:hover{
+        transform: skew(20deg, 10deg);
+    }
+}

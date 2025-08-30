@@ -1,0 +1,451 @@
+/* ===== Base/estilo da página (apenas para visual) ===== */
+:root {
+    --bg: #0f172a;
+    /* fundo da página */
+    --panel: #111827;
+    /* painel dos cards */
+    --ink: #e5e7eb;
+    /* texto principal */
+    --muted: #94a3b8;
+    /* texto secundário */
+    --brand: #22d3ee;
+    /* ciano */
+    --ok: #34d399;
+    /* verde */
+    --warn: #fbbf24;
+    /* amarelo */
+    --danger: #fb7185;
+    /* rosa */
+    --radius: 14px;
+}
+
+* {
+    box-sizing: border-box
+}
+
+html,
+body {
+    height: 100%
+}
+
+body {
+    margin: 0;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 1.5;
+    font-family: Segoe UI;
+    color: var(--ink);
+    background: radial-gradient(1200px 600px at 10% -10%, #1f2937 0%, transparent 60%), var(--bg);
+}
+
+header {
+    padding: 32px 20px 8px;
+    text-align: center;
+}
+
+header h1 {
+    margin: 0 0 6px;
+    font-weight: 800;
+    letter-spacing: .3px
+}
+
+header p {
+    margin: 0;
+    color: var(--muted)
+}
+
+.grid {
+    display: grid;
+    gap: 18px;
+    padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto 60px;
+    grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+}
+
+.card {
+    background: linear-gradient(180deg, #111827, #0b1220);
+    border: 1px solid #1f2937;
+    border-radius: var(--radius);
+    padding: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, .35);
+}
+
+.card h3 {
+    margin: 2px 0 8px;
+    font-size: 18px
+}
+
+.card p {
+    margin: 0 0 12px;
+    color: var(--muted);
+    font-size: 14px
+}
+
+.stage {
+    background: #0b1020;
+    border: 1px dashed #243044;
+    border-radius: 12px;
+    padding: 14px;
+    min-height: 120px;
+    display: grid;
+    place-items: center;
+    position: relative;
+    overflow: hidden;
+}
+
+.tag {
+    display: inline-block;
+    font-size: 12px;
+    color: #0b1020;
+    background: var(--brand);
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-weight: 700
+}
+
+.note {
+    font-size: 12px;
+    color: var(--muted);
+    margin-top: 8px
+}
+
+.row {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    justify-content: center
+}
+
+/* Acessibilidade: respeitar usuários que preferem menos movimento */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation: none !important;
+        transition: none !important
+    }
+}
+
+/* ===== 1) Fade in/out ===== */
+.fade-box {
+    width: 90px;
+    height: 90px;
+    border-radius: 12px;
+    background: var(--brand);
+    animation-name: fade;
+    animation-duration: 2.2s;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    /* opcionais (mantidos no padrão)
+    animation-delay: 0s;
+    animation-direction: normal;
+    animation-fill-mode: none;
+    animation-play-state: running;
+    */
+    /* animation: fade 2.2s ease-in-out infinite; */
+}
+
+@keyframes fade {
+
+    0%,
+    100% {
+        opacity: .25
+    }
+
+    50% {
+        opacity: 1
+    }
+}
+
+/* ===== 2) Move esquerda ↔ direita (alternate) ===== */
+.track {
+    width: 100%;
+    height: 14px;
+    background: #0e1726;
+    border-radius: 999px;
+    position: relative
+}
+
+.dot {
+    width: 22px;
+    height: 22px;
+    border-radius: 999px;
+    background: var(--ok);
+    position: absolute;
+    top: 50%;
+    left: 0;
+    translate: 0 -50%;
+    animation: moveX 2.4s cubic-bezier(.4, 0, .2, 1) infinite alternate;
+    box-shadow: 0 0 0 6px rgba(52, 211, 153, .15), 0 0 20px rgba(52, 211, 153, .35);
+}
+
+@keyframes moveX {
+    to {
+        left: calc(100% - 22px)
+    }
+}
+
+/* ===== 3) Quicar (bounce) ===== */
+.floor {
+    position: absolute;
+    inset: auto 10px 8px 10px;
+    height: 6px;
+    background: #0e1726;
+    border-radius: 999px
+}
+
+.ball {
+    width: 42px;
+    height: 42px;
+    border-radius: 999px;
+    background: linear-gradient(135deg, #60a5fa, #22d3ee);
+    animation: bounce 1s cubic-bezier(.33, .66, .66, 1) infinite;
+    transform-origin: bottom center;
+    box-shadow: 0 10px 18px rgba(34, 211, 238, .25);
+}
+
+@keyframes bounce {
+
+    0%,
+    100% {
+        translate: 0 0;
+        scale: 1 1
+    }
+
+    50% {
+        translate: 0 -70px;
+        scale: 1 1
+    }
+
+    60% {
+        scale: 1.06 .94
+    }
+
+    /* squash leve ao tocar o chão */
+}
+
+/* ===== 4) Girar (spinner) ===== */
+.spinner {
+    width: 64px;
+    height: 64px;
+    border-radius: 999px;
+    border: 6px solid #1f2a44;
+    border-top-color: var(--warn);
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    to {
+        rotate: 360deg
+    }
+}
+
+/* ===== 5) Pulso (scale) + pause no hover ===== */
+.pulse {
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    background: linear-gradient(180deg, #22d3ee, #3b82f6);
+    animation: pulse 1.2s ease-in-out infinite;
+}
+
+.pulse:hover {
+    animation-play-state: paused
+}
+
+/* pausa ao passar o mouse */
+@keyframes pulse {
+
+    0%,
+    100% {
+        scale: 1
+    }
+
+    50% {
+        scale: 1.12
+    }
+}
+
+/* ===== 6) Máquina de escrever (steps) ===== */
+.typewriter {
+    width: 22ch;
+    /* controla quantos caracteres aparecem */
+    border-right: 2px solid var(--brand);
+    white-space: nowrap;
+    overflow: hidden;
+    font: 700 20px/1.4 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    animation:
+        typing 3.2s steps(22) infinite alternate,
+        caret .6s steps(1, end) infinite;
+}
+
+@keyframes typing {
+    from {
+        width: 0
+    }
+}
+
+@keyframes caret {
+    50% {
+        border-right-color: transparent
+    }
+}
+
+/* ===== 7) Barra de carregamento ===== */
+.bar {
+    width: 100%;
+    height: 18px;
+    border-radius: 999px;
+    background: #0e1726;
+    overflow: hidden
+}
+
+.bar>span {
+    display: block;
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #22d3ee, #34d399);
+    animation: load 2.6s linear infinite;
+}
+
+@keyframes load {
+    0% {
+        width: 0%
+    }
+
+    60% {
+        width: 80%
+    }
+
+    100% {
+        width: 100%
+    }
+}
+
+/* ===== 8) Skeleton shimmer (efeito “carregando conteúdo”) ===== */
+.skeleton {
+    width: 80%;
+    height: 18px;
+    border-radius: 8px;
+    background:
+        linear-gradient(90deg, #0f1a2e 0%, #1b2a48 50%, #0f1a2e 100%);
+    background-size: 200% 100%;
+    animation: shimmer 1.5s linear infinite;
+}
+
+@keyframes shimmer {
+    to {
+        background-position: -200% 0
+    }
+}
+
+/* ===== 9) Animação com steps(n): marcador “saltando” em 5 posições ===== */
+.steps-track {
+    position: relative;
+    width: 100%;
+    height: 10px;
+    background: #0e1726;
+    border-radius: 999px
+}
+
+.steps-track::before {
+    content: "";
+    position: absolute;
+    inset: -8px;
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    background:
+        radial-gradient(circle 3px at 10% 50%, #334155 98%, transparent 100%) 0 0 / 20% 100% repeat-x;
+    pointer-events: none;
+}
+
+.steps-dot {
+    position: absolute;
+    top: 50%;
+    translate: 0 -50%;
+    width: 18px;
+    height: 18px;
+    border-radius: 999px;
+    background: var(--danger);
+    animation: jump 2.5s steps(4) infinite;
+    /* 5 posições = steps(4) para saltos “em degraus” */
+    box-shadow: 0 0 0 5px rgba(251, 113, 133, .15), 0 0 18px rgba(251, 113, 133, .35);
+}
+
+@keyframes jump {
+    0% {
+        left: 0%
+    }
+
+    100% {
+        left: calc(100% - 18px)
+    }
+}
+
+/* ===== 10) Stagger (atraso escalonado) + fill-mode: both ===== */
+.lista {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center
+}
+
+.lista .chip {
+    --i: 0;
+    /* índice que vamos variar no HTML */
+    padding: 6px 10px;
+    border-radius: 999px;
+    background: #101a2e;
+    border: 1px solid #1f2937;
+    color: #cbd5e1;
+    font-size: 12px;
+    opacity: 0;
+    translate: 0 6px;
+    animation: appear .6s ease both;
+    /* both = aplica estilos do 0% antes e do 100% depois */
+    animation-delay: calc(var(--i) * .12s);
+}
+
+@keyframes appear {
+    to {
+        opacity: 1;
+        translate: 0 0
+    }
+}
+
+/* ===== (extra) Combinar múltiplas animações no mesmo elemento ===== */
+.combo {
+    width: 90px;
+    height: 90px;
+    border-radius: 16px;
+    background: conic-gradient(from 0deg, #22d3ee, #3b82f6, #22d3ee);
+    animation:
+        spin 2.4s linear infinite,
+        pulse 1.4s ease-in-out infinite;
+}
+
+/* Mini legendas coloridas para os títulos */
+.pill {
+    display: inline-block;
+    padding: 2px 8px;
+    border-radius: 999px;
+    font-size: 11px;
+    font-weight: 800;
+    color: #0b1020;
+    margin-right: 6px
+}
+
+.c1 {
+    background: var(--brand)
+}
+
+.c2 {
+    background: var(--ok)
+}
+
+.c3 {
+    background: var(--warn)
+}
+
+.c4 {
+    background: var(--danger)
+}
