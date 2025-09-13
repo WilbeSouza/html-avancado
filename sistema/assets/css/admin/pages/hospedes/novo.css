@@ -1,7 +1,7 @@
 @import url("../../shared/cores.css");
-@import url("../../shared/footer.css");
-@import url("../../shared/header.css");
 @import url("../../shared/page.css");
+@import url("../../shared/header.css");
+@import url("../../shared/footer.css");
 @import url("../../shared/utils.css");
 
 .hospedes-header{
@@ -16,6 +16,7 @@
         color: var(--header-bg);
     }
 }
+
 .form-container{
     background-color: var(--card-bg);
     padding: 2rem;
@@ -33,6 +34,7 @@
             color: var(--header-bg);
             font-weight: bold;
         }
+
         input,
         select,
         date,
@@ -46,6 +48,7 @@
             box-sizing: border-box;
         }
     }
+
     .form-actions{
         display: flex;
         justify-content: flex-end;

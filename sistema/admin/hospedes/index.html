@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>HotelPro - Hóspedes</title>
-    <link rel="stylesheet" href="../../assests/css/admin/pages/hospedes/index.css">
+    <link rel="stylesheet" href="../../assets/css/admin/pages/hospedes/index.css">
 </head>
 <body>
     <header>
@@ -42,29 +42,8 @@
                         <th>Ações</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>Mariana Souza</td>
-                        <td>123.456.789-10</td>
-                        <td>20/07/2025</td>
-                        <td>25/07/2025</td>
-                        <td>101</td>
-                        <td>
-                            <a href="editar/1" class="btn btn-pincel"><i class="fa-solid fa-pencil"></i></a>
-                            <button class="btn btn-apagar"  ><i class="fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td>João Pereira</td>
-                        <td>892.381.219-20</td>
-                        <td>22/07/2025</td>
-                        <td>28/07/2025</td>
-                        <td>202</td>
-                        <td>
-                            <a href="editar/1" class="btn btn-pincel"><i class="fa-solid fa-pencil"></i></a>
-                            <button class="btn btn-apagar"><i class="fa-solid fa-trash"></i></button>
-                        </td>
-                    </tr>
+                <tbody id="tbody-hospedes">
+                    
                 </tbody>
             </table>
         </div>
@@ -74,5 +53,8 @@
         &copy; 2025 HoteSys. Todos os direitos reservados.
     </footer>
     <script src="https://kit.fontawesome.com/6407b96dc5.js" crossorigin="anonymous"></script>
+    <script src="../../assets/js/admin/pages/hospedes/index.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
